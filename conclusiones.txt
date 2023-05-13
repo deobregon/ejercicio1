@@ -1,0 +1,16 @@
+El test se ejecutó de manera controlada de modo que el flujo para agregar un producto sea uno definido de manera que se
+pueda utilizar el mismo para agregar N productos, en el caso del ejercicio se agregaron dos productos "Samsung SyncMaster"
+y "Macbook". La estrategia que se utilizó para agregar el producto es la de agregar el primer resultado de la búsqueda de esta
+manera se puede reutilizar la busqueda y el agregar al carrito.
+
+Se agregó un paso de verificación "verify the products are added" el cual fallará en caso de que no se hayan agregado
+2 productos por cualquier razon. Se implementó además un método que permite llenar el formulario de checkout con valores
+indicados en el escenario para permitir su reutilización en otros escenarios.
+
+El proceso de checkout finaliza de manera exitosa unicamente cuando se visualiza en pantalla el mensaje
+"Your order has been placed!" el cual también es parametrizable a nivel del escenario.
+
+El test finalizó de manera exitosa con la observación de que se validó unicamente un flujo para agregar un producto,
+se determinaron al menos 3 flujos distintos. Además existen productos que no se encuentran en inventario por lo que se
+debe implementar una validación y posiblemente un flujo alterno en el que se elimine el producto que del que no se dispone
+y se agregue otro en su lugar.

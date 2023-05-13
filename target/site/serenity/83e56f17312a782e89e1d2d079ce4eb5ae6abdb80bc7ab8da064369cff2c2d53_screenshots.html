@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="e761f5170639b9aaa5dab8881c0c620069082bb35cc2d9ceee6f0c5c797ff308.html">Test Shopping Cart</a></span>
+                > <span class="truncate-60"><a
+                    href="83e56f17312a782e89e1d2d079ce4eb5ae6abdb80bc7ab8da064369cff2c2d53.html">Adds 2 products </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 12-05-2023 18:01</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Test Shopping Cart</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Adds 2 products
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="004ba05a2fe7793923496343c4e93dc282378284c21dcd63606ea975392d6f3f.png" title=" Given Diana navigate to Homepage" width="1366"/>
+                <img src="004ba05a2fe7793923496343c4e93dc282378284c21dcd63606ea975392d6f3f.png" title=" Diana opens the Open Cart home page" width="1366"/>
+                <img src="004ba05a2fe7793923496343c4e93dc282378284c21dcd63606ea975392d6f3f.png" title=" Diana opens the Open cart home page" width="1366"/>
+                <img src="004ba05a2fe7793923496343c4e93dc282378284c21dcd63606ea975392d6f3f.png" title=" Diana opens the Open Cart home page (completed)" width="1366"/>
+                <img src="004ba05a2fe7793923496343c4e93dc282378284c21dcd63606ea975392d6f3f.png" title=" Given Diana navigate to Homepage (completed)" width="1366"/>
+                <img src="98b65a24c1c045e6a330ad2043c98474a1a2a66328ffe4fa7eb4611e95606724.png" title=" When she searches for &quot;Samsung SyncMaster&quot;" width="1366"/>
+                <img src="98b65a24c1c045e6a330ad2043c98474a1a2a66328ffe4fa7eb4611e95606724.png" title=" Diana attempts to search for Samsung SyncMaster" width="1366"/>
+                <img src="98b65a24c1c045e6a330ad2043c98474a1a2a66328ffe4fa7eb4611e95606724.png" title=" Diana clears field [By.xpath: //input[contains(@type, 'text') and contains(@name, 'search')]]" width="1366"/>
+                <img src="09d6a8d1db0fdacd7fc2bf8e3022fc8b91adaca91611c1aa8ea48660aaf42b70.png" title=" Diana clears field [By.xpath: //input[contains(@type, 'text') and contains(@name, 'search')]] (completed)" width="1366"/>
+                <img src="09d6a8d1db0fdacd7fc2bf8e3022fc8b91adaca91611c1aa8ea48660aaf42b70.png" title=" Diana enters 'Samsung SyncMaster' into By.xpath: //input[contains(@type, 'text') and contains(@name, 'search')]" width="1366"/>
+                <img src="2d5550a2ed7d81278366c58f905bedd1f3fe29bb4db1c483eaec3e86a5615cdf.png" title=" Diana enters 'Samsung SyncMaster' into By.xpath: //input[contains(@type, 'text') and contains(@name, 'search')] (completed)" width="1366"/>
+                <img src="d92ed6d11a054434bbbc4df0cf503842490fcc55902f36e14544b7c548c1284e.png" title=" Diana clicks on [By.xpath: (//span[@class='input-group-btn']/button)]" width="1366"/>
+                <img src="dcebfea61489d45499f14461dc47f1c89863a21cd81a90e4b229b3e80b4bbc4b.png" title=" Diana clicks on [By.xpath: (//span[@class='input-group-btn']/button)] (completed)" width="1366"/>
+                <img src="dcebfea61489d45499f14461dc47f1c89863a21cd81a90e4b229b3e80b4bbc4b.png" title=" Diana attempts to search for Samsung SyncMaster (completed)" width="1366"/>
+                <img src="dcebfea61489d45499f14461dc47f1c89863a21cd81a90e4b229b3e80b4bbc4b.png" title=" When she searches for &quot;Samsung SyncMaster&quot; (completed)" width="1366"/>
+                <img src="9f967df91f7219a4d6a368f4d2121104c1a99adeb084840ddbadabb29c2262ef.png" title=" When she adds the first result" width="1366"/>
+                <img src="9f967df91f7219a4d6a368f4d2121104c1a99adeb084840ddbadabb29c2262ef.png" title=" Diana adds product to cart" width="1366"/>
+                <img src="9f967df91f7219a4d6a368f4d2121104c1a99adeb084840ddbadabb29c2262ef.png" title=" Diana clicks on [By.xpath: (//*[@id='content']/div[3]/div[1]/div/div[2]/div[2]/button[1])]" width="1366"/>
+                <img src="1307546c5dd1f02a5934275e2d0d6194362f0fb0ff75fc70bc9a2559ff8b61bc.png" title=" Diana adds product to cart (completed)" width="1366"/>
+                <img src="5815c2851240b37b4a273579fe1e060a094715c8d0f68c4c9d4d57d08aedaa34.png" title=" When she adds the first result (completed)" width="1366"/>
+                <img src="ab3e83285095dd53f1be88174f70ccfeadeb8e391b1d6d4df15f9f7937f25de4.png" title=" When she searches for &quot;MacBook&quot;" width="1366"/>
+                <img src="ab3e83285095dd53f1be88174f70ccfeadeb8e391b1d6d4df15f9f7937f25de4.png" title=" Diana attempts to search for MacBook" width="1366"/>
+                <img src="ab3e83285095dd53f1be88174f70ccfeadeb8e391b1d6d4df15f9f7937f25de4.png" title=" Diana clears field [By.xpath: //input[contains(@type, 'text') and contains(@name, 'search')]]" width="1366"/>
+                <img src="ab3e83285095dd53f1be88174f70ccfeadeb8e391b1d6d4df15f9f7937f25de4.png" title=" Diana enters 'MacBook' into By.xpath: //input[contains(@type, 'text') and contains(@name, 'search')]" width="1366"/>
+                <img src="82813408a9211d0402cec3b050f8e5c475e18d1593b37cb2e08ce8f1fe2f7148.png" title=" Diana enters 'MacBook' into By.xpath: //input[contains(@type, 'text') and contains(@name, 'search')] (completed)" width="1366"/>
+                <img src="07812499b611c62575b8c335b25383ab0a50de965bb2ee930218459c609ef5a4.png" title=" Diana clicks on [By.xpath: (//span[@class='input-group-btn']/button)]" width="1366"/>
+                <img src="de3abd1f6d881e6e780666229610e8914322745b3b7977d100dd91c2384d3f21.png" title=" Diana clicks on [By.xpath: (//span[@class='input-group-btn']/button)] (completed)" width="1366"/>
+                <img src="de3abd1f6d881e6e780666229610e8914322745b3b7977d100dd91c2384d3f21.png" title=" Diana attempts to search for MacBook (completed)" width="1366"/>
+                <img src="de3abd1f6d881e6e780666229610e8914322745b3b7977d100dd91c2384d3f21.png" title=" When she searches for &quot;MacBook&quot; (completed)" width="1366"/>
+                <img src="c1c629667ae535f4a3897fd7039caf8f08e1a24132855ed4a5f3ad87358e5282.png" title=" When she adds the first result" width="1366"/>
+                <img src="c1c629667ae535f4a3897fd7039caf8f08e1a24132855ed4a5f3ad87358e5282.png" title=" Diana adds product to cart" width="1366"/>
+                <img src="c1c629667ae535f4a3897fd7039caf8f08e1a24132855ed4a5f3ad87358e5282.png" title=" Diana clicks on [By.xpath: (//*[@id='content']/div[3]/div[1]/div/div[2]/div[2]/button[1])]" width="1366"/>
+                <img src="9c2f44e0f54a14f322d7e62447238eac47399a01d8190ed309ddfba419d69c76.png" title=" Diana adds product to cart (completed)" width="1366"/>
+                <img src="b2789c581a3512d73e89b6dca7944b0bbe76a5002e248bea77158b5d7520337d.png" title=" When she adds the first result (completed)" width="1366"/>
+                <img src="84b1221042da6b6c3479c14b32bfe9f10fb067b1a16a5e7cf07c966f79c90d81.png" title=" When she clicks the cart button" width="1366"/>
+                <img src="84b1221042da6b6c3479c14b32bfe9f10fb067b1a16a5e7cf07c966f79c90d81.png" title=" Diana press the cart button" width="1366"/>
+                <img src="84b1221042da6b6c3479c14b32bfe9f10fb067b1a16a5e7cf07c966f79c90d81.png" title=" Diana clicks on [By.xpath: //a[@title='Shopping Cart']]" width="1366"/>
+                <img src="84b1221042da6b6c3479c14b32bfe9f10fb067b1a16a5e7cf07c966f79c90d81.png" title=" Diana press the cart button (completed)" width="1366"/>
+                <img src="84b1221042da6b6c3479c14b32bfe9f10fb067b1a16a5e7cf07c966f79c90d81.png" title=" When she clicks the cart button (completed)" width="1366"/>
+                <img src="84b1221042da6b6c3479c14b32bfe9f10fb067b1a16a5e7cf07c966f79c90d81.png" title=" When she verify the products are added" width="1366"/>
+                <img src="84b1221042da6b6c3479c14b32bfe9f10fb067b1a16a5e7cf07c966f79c90d81.png" title=" Diana should see total carrito with text value that contains: &lt;[2 item]&gt;" width="1366"/>
+                <img src="03a61176e0fc152f743be8afe8c6acb8f614c5911e5a045cc5c61df5d041bad2.png" title=" When she go to guest checkout" width="1366"/>
+                <img src="03a61176e0fc152f743be8afe8c6acb8f614c5911e5a045cc5c61df5d041bad2.png" title=" Diana goes to guest checkout" width="1366"/>
+                <img src="03a61176e0fc152f743be8afe8c6acb8f614c5911e5a045cc5c61df5d041bad2.png" title=" Diana clicks on [By.xpath: //a[contains(@class, 'btn-primary') and text()='Checkout']]" width="1366"/>
+                <img src="03a61176e0fc152f743be8afe8c6acb8f614c5911e5a045cc5c61df5d041bad2.png" title=" Diana clicks on [By.xpath: //input[@type='radio' and @value='guest']]" width="1366"/>
+                <img src="ca14178db0c0333fe30b5879d6b8efb28cdb300a42b66dc4a0c65772fab58e17.png" title=" Diana clicks on [By.xpath: //input[@type='radio' and @value='guest']] (completed)" width="1366"/>
+                <img src="ca14178db0c0333fe30b5879d6b8efb28cdb300a42b66dc4a0c65772fab58e17.png" title=" Diana clicks on [By.xpath: //input[@id='button-account']]" width="1366"/>
+                <img src="04b226869fca31a557abc94ac563977be3770bd90ce8aa27eebdb20d354785b2.png" title=" Diana clicks on [By.xpath: //input[@id='button-account']] (completed)" width="1366"/>
+                <img src="04b226869fca31a557abc94ac563977be3770bd90ce8aa27eebdb20d354785b2.png" title=" Diana goes to guest checkout (completed)" width="1366"/>
+                <img src="c010a97a6fd8945a6676a72443490c63a4dd6c3805db5b8feac7b2bed54d2de4.png" title=" When she go to guest checkout (completed)" width="1366"/>
+                <img src="ca75746fe9000c08dd5cddbf10ee1f3f57631795915c7162ea7ccc6f5281204d.png" title=" When she fills checkout form with &quot;Diana&quot;, &quot;Obregon&quot;, &quot;diana@hotmail.com&quot;, &quot;0987654321&quot;, &quot;MARIA AUXILIADORA&quot;, &quot;CUENCA&quot;, &quot;010203&quot;, &quot;Ecuador&quot;, &quot;Azuay&quot;" width="1366"/>
+                <img src="ca75746fe9000c08dd5cddbf10ee1f3f57631795915c7162ea7ccc6f5281204d.png" title=" Diana fills checkout form" width="1366"/>
+                <img src="ca75746fe9000c08dd5cddbf10ee1f3f57631795915c7162ea7ccc6f5281204d.png" title=" Diana enters 'Diana' into By.xpath: //input[@id='input-payment-firstname']" width="1366"/>
+                <img src="979f8ad2fe8a6f924527af86199fbdc2a22aaf78ebc663264178dcffa8c0f756.png" title=" Diana enters 'Diana' into By.xpath: //input[@id='input-payment-firstname'] (completed)" width="1366"/>
+                <img src="979f8ad2fe8a6f924527af86199fbdc2a22aaf78ebc663264178dcffa8c0f756.png" title=" Diana enters 'Obregon' into By.xpath: //input[@id='input-payment-lastname']" width="1366"/>
+                <img src="3d79626f21ce6439c56d2fc5c1e520c12ff8dcd2bac6f458ff1cf9301e676155.png" title=" Diana enters 'Obregon' into By.xpath: //input[@id='input-payment-lastname'] (completed)" width="1366"/>
+                <img src="6aaac620d04fa185fe755ff69ec441803bd6166b20075fb56017900cee512c80.png" title=" Diana enters 'diana@hotmail.com' into By.xpath: //input[@id='input-payment-email']" width="1366"/>
+                <img src="3d67927b1b7c92694a92efd3d71983490760c729986178fd07b821e8e5b22b4b.png" title=" Diana enters 'diana@hotmail.com' into By.xpath: //input[@id='input-payment-email'] (completed)" width="1366"/>
+                <img src="3d67927b1b7c92694a92efd3d71983490760c729986178fd07b821e8e5b22b4b.png" title=" Diana enters '0987654321' into By.xpath: //input[@id='input-payment-telephone']" width="1366"/>
+                <img src="88a81e1351314636c17c6d35d0cdcbc7a9f4b556ba8a971facc880c8c574bc50.png" title=" Diana enters '0987654321' into By.xpath: //input[@id='input-payment-telephone'] (completed)" width="1366"/>
+                <img src="88a81e1351314636c17c6d35d0cdcbc7a9f4b556ba8a971facc880c8c574bc50.png" title=" Diana enters 'MARIA AUXILIADORA' into By.xpath: //input[@id='input-payment-address-1']" width="1366"/>
+                <img src="6cee74d4285225cbcaff0eae1e2800a0b5c173d9ad4a0c64140024ee17a3c192.png" title=" Diana enters 'MARIA AUXILIADORA' into By.xpath: //input[@id='input-payment-address-1'] (completed)" width="1366"/>
+                <img src="6cee74d4285225cbcaff0eae1e2800a0b5c173d9ad4a0c64140024ee17a3c192.png" title=" Diana enters 'CUENCA' into By.xpath: //input[@id='input-payment-city']" width="1366"/>
+                <img src="99803e42fede7549d8b256e0c1ddd3a896ef440a5b8f0e704c4e9f5189e651f4.png" title=" Diana enters 'CUENCA' into By.xpath: //input[@id='input-payment-city'] (completed)" width="1366"/>
+                <img src="99803e42fede7549d8b256e0c1ddd3a896ef440a5b8f0e704c4e9f5189e651f4.png" title=" Diana enters '010203' into By.xpath: //input[@id='input-payment-postcode']" width="1366"/>
+                <img src="8e20fb8653abb1ab284bf1ac612a1ea0679ff8bf614aacc76892329baecd6b57.png" title=" Diana enters '010203' into By.xpath: //input[@id='input-payment-postcode'] (completed)" width="1366"/>
+                <img src="f325457f9992559cc42ad27881494fff173c0b8a4eafd99401a00617f93c3ef5.png" title=" Diana clicks on [By.xpath: //select[@id='input-payment-country']]" width="1366"/>
+                <img src="e4a1598ff7fbd6d5cfd75b31a6661b69fc61d71ec3735e3e933ae1c34116d59f.png" title=" Diana clicks on [By.xpath: //select[@id='input-payment-country']] (completed)" width="1366"/>
+                <img src="e4a1598ff7fbd6d5cfd75b31a6661b69fc61d71ec3735e3e933ae1c34116d59f.png" title=" Diana selects Ecuador" width="1366"/>
+                <img src="aee2039785fecf91fd9bf8180903fd6e9bcbcefd9f0d9dee25f51c392c312493.png" title=" Diana selects Ecuador (completed)" width="1366"/>
+                <img src="aee2039785fecf91fd9bf8180903fd6e9bcbcefd9f0d9dee25f51c392c312493.png" title=" Diana clicks on [By.xpath: //select[@id='input-payment-zone']]" width="1366"/>
+                <img src="67e22a7e8236a404af87e7531a189ce954d62f76373f66201e77ba3f72d40467.png" title=" Diana clicks on [By.xpath: //select[@id='input-payment-zone']] (completed)" width="1366"/>
+                <img src="67e22a7e8236a404af87e7531a189ce954d62f76373f66201e77ba3f72d40467.png" title=" Diana selects Azuay" width="1366"/>
+                <img src="67e22a7e8236a404af87e7531a189ce954d62f76373f66201e77ba3f72d40467.png" title=" Diana clicks on [By.xpath: //input[@id='button-guest']]" width="1366"/>
+                <img src="1587461b160e6750e8d11417c694f7a2b80381e786267f123ec20ecbcc5e0f19.png" title=" Diana clicks on [By.xpath: //input[@id='button-guest']] (completed)" width="1366"/>
+                <img src="1587461b160e6750e8d11417c694f7a2b80381e786267f123ec20ecbcc5e0f19.png" title=" Diana fills checkout form (completed)" width="1366"/>
+                <img src="48c640747d46e9d582f24f926a72874b0d943c177a3ce534a4858f9c3794b4cc.png" title=" When she fills checkout form with &quot;Diana&quot;, &quot;Obregon&quot;, &quot;diana@hotmail.com&quot;, &quot;0987654321&quot;, &quot;MARIA AUXILIADORA&quot;, &quot;CUENCA&quot;, &quot;010203&quot;, &quot;Ecuador&quot;, &quot;Azuay&quot; (completed)" width="1366"/>
+                <img src="da2a4f547587d7173c7830fc1b0082e04efc222e4ba7004ec0667a2dce443bf4.png" title=" When she click on continue button in the shipping information" width="1366"/>
+                <img src="da2a4f547587d7173c7830fc1b0082e04efc222e4ba7004ec0667a2dce443bf4.png" title=" Diana clicks on continue" width="1366"/>
+                <img src="da2a4f547587d7173c7830fc1b0082e04efc222e4ba7004ec0667a2dce443bf4.png" title=" Diana clicks on [By.xpath: //input[@id='button-shipping-method']]" width="1366"/>
+                <img src="da2a4f547587d7173c7830fc1b0082e04efc222e4ba7004ec0667a2dce443bf4.png" title=" Diana clicks on continue (completed)" width="1366"/>
+                <img src="4b7ac14f113768e6abf8727c032ba6ddd6c2c41e7d489bc3a320c321b8369a42.png" title=" When she click on continue button in the shipping information (completed)" width="1366"/>
+                <img src="0ccf505928055a4fe60af3ac43f4643bb65c3555b5307ec2ec9c742969cd68d5.png" title=" When she agrees terms and conditions" width="1366"/>
+                <img src="0ccf505928055a4fe60af3ac43f4643bb65c3555b5307ec2ec9c742969cd68d5.png" title=" Diana agrees terms and conditions" width="1366"/>
+                <img src="0ccf505928055a4fe60af3ac43f4643bb65c3555b5307ec2ec9c742969cd68d5.png" title=" Diana clicks on [By.xpath: //input[@type='checkbox' and @name='agree']]" width="1366"/>
+                <img src="0ccf505928055a4fe60af3ac43f4643bb65c3555b5307ec2ec9c742969cd68d5.png" title=" Diana agrees terms and conditions (completed)" width="1366"/>
+                <img src="0ccf505928055a4fe60af3ac43f4643bb65c3555b5307ec2ec9c742969cd68d5.png" title=" Diana clicks on continue" width="1366"/>
+                <img src="0ccf505928055a4fe60af3ac43f4643bb65c3555b5307ec2ec9c742969cd68d5.png" title=" Diana clicks on [By.xpath: //input[@id='button-payment-method']]" width="1366"/>
+                <img src="4c275a44f0aba274b9d4e156129f3be949fc9dabccf6457a6123a43213f5c844.png" title=" Diana clicks on [By.xpath: //input[@id='button-payment-method']] (completed)" width="1366"/>
+                <img src="a21ef8db335ebef27b4d56778eb13f80d28224cd8c875c1e3295914e50297d10.png" title=" Diana clicks on continue (completed)" width="1366"/>
+                <img src="bd24e5d0e74f7d2a0b8ce30592e79a7187c6fb533a2380edcc4d44ed01655076.png" title=" When she agrees terms and conditions (completed)" width="1366"/>
+                <img src="11d59e3dc8c1a4a9877281ed514f4e9f380db1efc43c23708a1f4ef7dd99abb1.png" title=" When she confirms the order" width="1366"/>
+                <img src="11d59e3dc8c1a4a9877281ed514f4e9f380db1efc43c23708a1f4ef7dd99abb1.png" title=" Diana clicks on confirms the order" width="1366"/>
+                <img src="11d59e3dc8c1a4a9877281ed514f4e9f380db1efc43c23708a1f4ef7dd99abb1.png" title=" Diana clicks on [By.xpath: //input[@id='button-confirm']]" width="1366"/>
+                <img src="11d59e3dc8c1a4a9877281ed514f4e9f380db1efc43c23708a1f4ef7dd99abb1.png" title=" Diana clicks on confirms the order (completed)" width="1366"/>
+                <img src="8d130c444aa84fc6fe7cfcd15061b0e04a570b9f685a697cd79f8fde0fc3474e.png" title=" When she confirms the order (completed)" width="1366"/>
+                <img src="8d130c444aa84fc6fe7cfcd15061b0e04a570b9f685a697cd79f8fde0fc3474e.png" title=" Then she validates confirmation message &quot;Your order has been placed!&quot;" width="1366"/>
+                <img src="8d130c444aa84fc6fe7cfcd15061b0e04a570b9f685a697cd79f8fde0fc3474e.png" title=" Diana should see message with text value that contains: &lt;[Your order has been placed!]&gt;: <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.12</span>
+</div>
+</body>
+</html>
