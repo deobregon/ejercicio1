@@ -20,14 +20,18 @@ Para ejecutar el proyecto es necesario tener instalado lo siguiente:
 
 - Para ejecutar el Test implementado se debe ejecutar el proyecto ubicandose en la raiz del proyecto y ejecutando:
 
+1. Abrir la configuracion del proyecto con: Maven project
+2. Ubicarse en el archivo CucumberTestSuite.java y ejecutar el Test correspondiente.
+
+Otra forma de ejecutar el proyecto es desde el terminal mediante:
+
 ```bash
   #En windows
-    ./mvnw.cmd clean test
+    ./mvnw.cmd clean install
   #En Linux
-    ./mvnw clean test
+    ./mvnw clean install
 ```
 
-Otra forma de ejecutar el proyecto es ubicandose con intellij-idea en el archivo <b>CucumberTestSuite</b> y ejecutar el Test correspondiente.
 
 # Reportes
 El reporte de ejecuci'on del test realizado se encuentra en la ruta <b>target/site/serenity/index.html<b>
